@@ -253,44 +253,67 @@
 
     </div><!-- /.col-xs-12 -->
 </div>
-
-<nav id="footer">
+<hr>
+<!-- middle section -->
+<section>
     <div class="container">
-        <div id="footer-table">
-            <table>
-                <tbody>
-                    <tr>
-                        <td>
-                            <ul>
-                                <li><h5>Sign In</h5></li>
-                            </ul>
-                        </td>                    
-                        <td>
-                            <ul>
-                                <li><h5>Buy</h5></li>
-                            </ul>
-                        </td>
-                        <td>
-                            <ul>
-                                <li><h5>Sell</h5></li>
-                            </ul>
-                        </td>
-                        <td>
-                            <ul>
-                                <li><h5>Trade</h5></li>
-                            </ul>
-                        </td>
-                        <td>
-                            <ul>
-                                <li><h5>Free</h5></li>
-                            </ul>
-                        </td>                        
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="pull-right">
-            <a href="#home" class="page-scroll">Back to Top <span class="fa fa-angle-up"></span></a>
-        </div>
+            <div class="row">        
+                <span class="col-md-3 text-center" id="deals"><h1>Daily Deals</h1></span>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-5" text-center>
+                        <img src="img/moltres.png" class="img-responsive center-block" width="406" height="257" style="padding:1px; border:1px solid #021a40">
+                </div>
+                <div class="col-md-2"></div>
+                <div class="col-md-5">
+                        <img src="img/moltres.png" class="img-responsive center-block" width="406" height="257" style="padding:1px; border:1px solid #021a40">
+                </div>
+            </div>
     </div>
-</nav>
+</section>
+
+<!-- beginning of footer -->
+<div id="footerFragment">
+    <footer id="glbfooter" role="contentInfo" class="gh-w">
+        <div class="container ">
+            <div id="footer-table">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li><h5>Sign In</h5></li>
+                                </ul>
+                            </td>                    
+                            <td>
+                                <ul>
+                                    <li><h5>Buy</h5></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li><h5>Sell</h5></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li><h5>Trade</h5></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li><h5>Free</h5></li>
+                                </ul>
+                            </td>                        
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="pull-right">
+                <a href="#home" class="page-scroll">Back to Top <span class="fa fa-angle-up"></span></a>
+            </div>
+        </div>
+    </footer>
+</div>
+
