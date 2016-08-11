@@ -4,11 +4,11 @@
 
 		<div class="row">
 
-			<h1 class="section-title">Signup For OooLister</h1>
+			<h1 class="section-title">Register at the Pokemon Black Market</h1>
 
 			<div class="col-md-6 col-md-offset-3">
 
-				<p>Please fill out the information below so we can create your account.</p>
+				<p>Please complete all fields.</p>
 				<?php if (isset($_SESSION['ERROR_MESSAGE'])) : ?>
 	                <div class="alert alert-danger">
 	                    <p class="error"><?= $_SESSION['ERROR_MESSAGE']; ?></p>
@@ -41,7 +41,8 @@
 							<button type="submit" class="btn btn-primary">Signup</button>
 						</div>
 						<div class="col-sm-6 text-right">
-							<a href="/login" class="btn btn-success">Go To Login</a>
+							<small>Already registered? Login!</small>
+							<a href="/login" class="btn btn-success">Login</a>
 						</div>
 					</div>
 

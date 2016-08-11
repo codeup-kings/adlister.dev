@@ -26,10 +26,10 @@ class Model {
     public function __get($name)
     {
         // Return the value from attributes with a matching $name, if it exists
-        if ( array_key_exists( $name, $this->attributes ) )
+        if (array_key_exists($name, $this->attributes))
         {
 
-            return $this->attributes[ $name ];
+            return $this->attributes[$name];
         }
 
         return null;
@@ -43,7 +43,7 @@ class Model {
     {
 
         // Store name/value pair in attributes array
-        $this->attributes[ $name ] = $value;
+        $this->attributes[$name] = $value;
     }
 
 
@@ -53,7 +53,7 @@ class Model {
     protected static function dbConnect()
     {
 
-        if ( ! self::$dbc )
+        if (!self::$dbc)
         {
 
             //Connect to database
@@ -72,10 +72,10 @@ class Model {
 
         //Ensure there are attributes before attempting to save
         //Perform the proper action - if the `id` is set, this is an update, if not it is a insert
-        if ( ! empty( $this->attributes ) && isset( $this->attributes['id'] ) )
+        if (!empty($this->attributes) && isset($this->attributes['id']))
         {
 
-            $this->update( $this->attributes['id'] );
+            $this->update($this->attributes['id']);
         }
         else
         {
@@ -87,9 +87,7 @@ class Model {
     // deletes object from db
     public function delete()
     {
-
         $query = 'DELETE FROM ' . static::$table . ' WHERE id = :id';
-
         $stmt = self::$dbc->prepare($query);
         $stmt->bindValue(':id', $this->attributes['id'], PDO::PARAM_INT);
         $stmt->execute();
@@ -108,7 +106,7 @@ class Model {
         foreach ($this->attributes as $column => $value)
         {
 
-            if ( $columns == '' && $value_placeholders == '')
+            if ($columns == '' && $value_placeholders == '')
             {
 
                 $columns .= $column;
@@ -136,7 +134,7 @@ class Model {
     }
 
     // updates existing entry in db
-    protected function update($id)
+    protected function update()
     {
 
         //Ensure that update is properly handled with the id key
@@ -148,45 +146,38 @@ class Model {
         foreach ($this->attributes as $key => $value)
         {
 
-            if ( $key == 'id')
+            if ($key == 'id')
             {
-
                 continue;
             }
 
-            if ( $first_value )
+            if ($first_value)
             {
-
                 $first_value = false;
                 $query .= $key . ' = :' . $key;
             }
             else
             {
-
                 $query .= ', ' . $key . ' = :' . $key;
             }
         }
 
         $query .= ' WHERE id = :id';
-
         $stmt = self::$dbc->prepare($query);
 
         foreach ($this->attributes as $key => $value)
         {
-
             $stmt->bindValue(':' . $key, $value, PDO::PARAM_STR);
         }
 
         $stmt->execute();
     }
 
-
     /*
      * Find a record based on an id
      */
     public static function find($id)
     {
-
         // Get connection to the database
         self::dbConnect();
 
@@ -197,16 +188,15 @@ class Model {
         $stmt->bindValue(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
 
-        //Store the resultset in a variable named $result
+        //Store the result set in a variable named $result
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
         // The following code will set the attributes on the calling object based on the result variable's contents
 
         $instance = null;
 
-        if ( $result )
+        if ($result)
         {
-
             $instance = new static;
             $instance->attributes = $result;
         }
@@ -237,9 +227,8 @@ class Model {
 
         $instance = null;
 
-        if ( $results )
+        if ($results)
         {
-
             $instance = new static;
             $instance->attributes = $results;
         }
@@ -248,5 +237,3 @@ class Model {
     }
 
 }
-
-?>

@@ -26,3 +26,18 @@ function saveUploadedImage($input_name)
     }
     return null;
 }
+
+function checkIfLoggedIn () {
+	if (Auth::check()){
+		header('Location: /user/account');
+		die();
+	}
+}
+
+function verifyLogin () {
+    if (!empty($_POST) && Auth::attempt(Input::get('username'), Input::get('password')))
+	{
+		header('Location: /');
+		die();
+	}
+}

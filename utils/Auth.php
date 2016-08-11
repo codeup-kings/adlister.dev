@@ -9,11 +9,10 @@ class Auth
 	// runs login attempt with parameters
 	public static function attempt($username, $password)
 	{
-
+	    $log = new Log();
 		// makes sure the values passed in are not empty
 		if(($username == '' || $username == null) || ($password == '' || $password == null))
 		{
-
 			$_SESSION['ERROR_MESSAGE'] = 'Login information was incorrect';
 			return false;
 		}
@@ -21,10 +20,9 @@ class Auth
 		// gets instance of user model by searching with username or email($username)
 		$user = User::findByUsernameOrEmail($username);
 
-		// makes sure the instance returned is not empty
+        // makes sure the instance returned is not empty
 		if ($user == null)
 		{
-
 			$_SESSION['ERROR_MESSAGE'] = 'Login information was incorrect';
 			return false;
 		}
@@ -32,14 +30,13 @@ class Auth
 		// checks password submitted against hashed password
 		if (password_verify($password, $user->password))
 		{
-
 			// sets session variables used for logged in user
 			$_SESSION['IS_LOGGED_IN'] = $user->username;
 			$_SESSION['LOGGED_IN_ID'] = $user->id;
-
+            $log->info("User $username logged in.");
 			return true;
 		}
-
+        $log->error("User $username failed to log in!");
 		$_SESSION['ERROR_MESSAGE'] = 'Login information was incorrect';
 		return false;
 	}
@@ -47,17 +44,14 @@ class Auth
 	// checks session to see if user is logged in
 	public static function check()
 	{
-
 		return (isset($_SESSION['IS_LOGGED_IN']) && $_SESSION['IS_LOGGED_IN'] != '');
 	}
 
 	// returns id of the currently logged in user
 	public static function id()
 	{
-
 		if (Auth::check())
 		{
-
 			return $_SESSION['LOGGED_IN_ID'];
 		}
 
@@ -70,7 +64,6 @@ class Auth
 
 		if (self::check())
 		{
-
 			return User::findByUsernameOrEmail($_SESSION['IS_LOGGED_IN']);
 		}
 
@@ -91,4 +84,3 @@ class Auth
 	}
 }
 
-?>

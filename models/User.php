@@ -40,7 +40,6 @@ class User extends Model {
 
         if ( $results )
         {
-
             $instance = new static;
             $instance->attributes = $results;
         }
