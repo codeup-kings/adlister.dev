@@ -1,9 +1,6 @@
-<div class="container">
-
-	<section>
-
-		<h1 class="section-title">404 Error</h1>
-
-	</section>
-
-</div>
+<style>
+	body {
+		background: url(/img/moltres404.jpg) no-repeat fixed center;
+		background-size: cover;
+	}
+</style>
