@@ -8,7 +8,6 @@ function pageController()
     // defines array to be returned and extracted for view
     $data = [];
 
-    // finds position for ? in url so we can look at the url minus the get variables
     $request = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
     // switch that will run functions and setup variables dependent on what route was accessed
@@ -17,14 +16,17 @@ function pageController()
             $main_view= '../views/home.php';
             break;
         case "/login":
-            $main_view= '../views/users/login.php';
+			$main_view= '../views/users/login.php';
+			checkIfLoggedIn();
+			verifyLogin();
             break;
         //not done
         case "/signup":
             $main_view= '../views/users/signup.php';
             break;
-        case "/signup":
-            $main_view= '../views/users/signup.php';
+        case "/user/account":
+//        	checkIfLoggedIn();
+            $main_view= '../views/users/account.php';
             break;
         case "/signup":
             $main_view= '../views/users/signup.php';
