@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default" style="padding:1px; border:1px solid grey">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -246,7 +246,7 @@
             <nav>
                 <ul class="control-box pager">
                     <li><a data-slide="prev" href="#myCarousel" class=""><i class="glyphicon glyphicon-chevron-left"></i></a></li>
-                    <li><a data-slide="next" href="#myCarousel" class=""><i class="glyphicon glyphicon-chevron-right"></i></li>
+                    <li><a data-slide="next" href="#myCarousel" class=""><i class="glyphicon glyphicon-chevron-right"></i></a></li>
                 </ul>
             </nav>
             <!-- /.control-box -->
@@ -299,44 +299,44 @@
 
 <!-- beginning of footer -->
 <div id="footerFragment">
-    <footer id="glbfooter" role="contentInfo" class="gh-w">
-        <div class="container ">
+    <footer id="glbfooter" role="contentInfo" class="gh-w" style="padding:1px; border:1px solid grey">
+        <div class="container">
             <div id="footer-table">
-                <table>
+                <table class="container-fluid text-center">
                     <tbody>
                         <tr>
                             <td>
                                 <ul>
-                                    <li><h5>Sign In</h5></li>
+                                    <li><h5><a href="#">Sign In</a></h5></li>
                                 </ul>
                             </td>                    
                             <td>
                                 <ul>
-                                    <li><h5>Buy</h5></li>
+                                    <li><h5><a href="#">Buy</a></h5></li>
                                 </ul>
                             </td>
                             <td>
                                 <ul>
-                                    <li><h5>Sell</h5></li>
+                                    <li><h5><a href="#">Sell</a></h5></li>
                                 </ul>
                             </td>
                             <td>
                                 <ul>
-                                    <li><h5>Trade</h5></li>
+                                    <li><h5><a href="#">Trade</a></h5></li>
                                 </ul>
                             </td>
                             <td>
                                 <ul>
-                                    <li><h5>Free</h5></li>
+                                    <li><h5><a href="#">Free</a></h5></li>
                                 </ul>
                             </td>                        
-                        </tr>
+                        </tr>                
                     </tbody>
-                </table>
-            </div>
+                </table>                    
+                <a href="#"><i class="fa fa-2x fa-arrow-up" aria-hidden="true"></i></a>
             <div class="pull-right">
-                <a href="#home" class="page-scroll">Back to Top <span class="fa fa-angle-up"></span></a>
-            </div>
+                <a href="#"><i class="fa fa-2x fa-arrow-up" aria-hidden="true"></i></a>
+            </div>                
         </div>
     </footer>
 </div>
