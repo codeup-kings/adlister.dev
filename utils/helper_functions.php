@@ -27,7 +27,7 @@ function saveUploadedImage($input_name)
     return null;
 }
 
-function checkIfLoggedInLoginPage() {
+function checkIfLoggedIn() {
 	if (Auth::check()){
 		header('Location: /user/account');
 		die();
@@ -49,11 +49,29 @@ function verifyLogin() {
 	}
 }
 
-function addUser() {
-	if (Input::has('username') && Input::has('email')) {
-		$username = Input::get();
-		if (!User::findByUsernameOrEmail($username_or_email)) {
-
+function addNewUser() {
+	if (!empty($_POST) && Input::has('username') && Input::has('email') && Input::has('name') && Input::has('password')) {
+		$username = Input::get('username');
+		$email = Input::get('email');
+		$name = Input::get('name');
+		$password = Input::get('password');
+		//jake true -> false || 'new@mail.com' null -> false -> true
+		if (!User::findByUsernameOrEmail($username) && !User::findByUsernameOrEmail($email)) {
+			$user = new User();
+			$user->name = $name;
+			$user->email = $email;
+			$user->username = $username;
+			$user->password = $password;
+			$user->save();
+			verifyLogin();
+			die();
+		} else {
+			if (User::findByUsernameOrEmail($username)) {
+				$_SESSION['DUPLICATE_MESSAGE'] = 'That username already exists.';
+			}
+			if (User::findByUsernameOrEmail($email)) {
+				$_SESSION['DUPLICATE_MESSAGE'] = 'That email is already in use by another user.';
+			}
 		}
 	}
 }
