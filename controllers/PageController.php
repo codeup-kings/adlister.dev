@@ -13,23 +13,25 @@ function pageController()
     // switch that will run functions and setup variables dependent on what route was accessed
     switch ($request) {
         case "/":
-            $main_view= '../views/partials/navbar.php';
+            $main_view= '../views/home.php';
             break;
         case "/login":
 			$main_view= '../views/users/login.php';
-			checkIfLoggedIn();
 			verifyLogin();
+			checkIfLoggedInLoginPage();
             break;
         //not done
         case "/signup":
             $main_view= '../views/users/signup.php';
             break;
         case "/user/account":
-//        	checkIfLoggedIn();
+        	checkIfLoggedInUserPage();
+			Auth::user();
             $main_view= '../views/users/account.php';
             break;
-        case "/signup":
-            $main_view= '../views/users/signup.php';
+        case "/logout":
+        	Auth::logout();
+			$main_view= '../views/partials/navbar.php';
             break;
         default:    // displays 404 if route not specified above
             $main_view = '../views/404.php';

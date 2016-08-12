@@ -1,3 +1,4 @@
+<?php require '../views/partials/navbar.php'?>
 <section>
     <div class="container">
         <div class="row">

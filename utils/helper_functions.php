@@ -27,17 +27,33 @@ function saveUploadedImage($input_name)
     return null;
 }
 
-function checkIfLoggedIn () {
+function checkIfLoggedInLoginPage() {
 	if (Auth::check()){
 		header('Location: /user/account');
 		die();
 	}
 }
 
-function verifyLogin () {
+function checkIfLoggedInUserPage() {
+	if (!Auth::check()){
+		header('Location: /login');
+		die();
+	}
+}
+
+function verifyLogin() {
     if (!empty($_POST) && Auth::attempt(Input::get('username'), Input::get('password')))
 	{
-		header('Location: /');
+		header('Location: /user/account');
 		die();
+	}
+}
+
+function addUser() {
+	if (Input::has('username') && Input::has('email')) {
+		$username = Input::get();
+		if (!User::findByUsernameOrEmail($username_or_email)) {
+
+		}
 	}
 }

@@ -1,5 +1,11 @@
 <!--Page for user account home-->
+
 <div class="container">
+    <section id="logout">
+        <form method="POST" action="/logout">
+            <button type="submit" name="logout" value="logout">Logout</button>
+        </form>
+    </section>
     <section id="account">
         <div class="row">
             <?php if (isset($_SESSION['ERROR_MESSAGE'])) : ?>
