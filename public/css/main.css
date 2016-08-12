@@ -14,15 +14,16 @@ a {
 a:hover {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; /* IE 8 */
     filter: alpha(opacity=50); /* IE7 */
-    opacity: 0.6;
+/*    opacity: 0.9;*/
     text-decoration: none;
+    color: blue;
 }
 
 
 
 body{
     border-top:0;
-    background:#c4e17f;
+    background:white;
 }
 
 .thumbnails li> .fff .caption {
@@ -60,7 +61,19 @@ ul.thumbnails {
     color: #999;
 }
 
+.navbar-default .navbar-brand {
+    color: #0e72ce;
+    background-color: transparent;
+}
 
+#navbarOr {
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+    padding-left: 0px;
+}
 
 /* Carousel Control */
 .control-box {
@@ -102,8 +115,12 @@ li { list-style-type:none;}
 ::selection { background: #ff5e99; color: #FFFFFF; text-shadow: 0; }
 ::-moz-selection { background: #ff5e99; color: #FFFFFF; }
 
-#featured {
-    padding-left:10%;
+#deals, #featured {
+    color: #020617;
+    background-color: #ffffff;
+    opacity: 0.9;
+    font-weight: 300;
+    font-family: sans-serif;
 }
 
 body {
@@ -129,9 +146,10 @@ body {
     text-align: left;
 }
 
-#deals {
-    color: maroon;
-    background-color: white;
-    opacity: 0.8;
-    font-weight: 600;
+
+/*#searchHome, #dropdownMenu1 {
+    margin-top: 78px;
+    margin-bottom: 78px;
 }
+*/
+

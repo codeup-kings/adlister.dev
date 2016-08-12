@@ -8,8 +8,8 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Sign in</a>
-      <a class="navbar-brand">or</a>
+      <a class="navbar-brand" href="#">Sign In</a>
+        <span id="navbarOr">or</span>
       <a class="navbar-brand" href="#">Register</a>      
     </div>
 
@@ -44,10 +44,10 @@
 <section>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-4" id="home-logo"><h2>Pokemon Black Market</h2></div>
+			<div class="col-md-4" id="home-logo"><img class="center-block img-responsive" style="padding:1px; border:1px solid #021a40" src="img/pokemon_logo.jpg"></div>
             <div class="col-md-6">
-                <div class="input-group">
-                    <input type="text" class="  search-query form-control" placeholder="Search" style="margin-top: 20px; margin-bottom: 20px"/>
+                <div class="input-group input-group-lg">
+                    <input type="text" id="searchHome"class="  search-query form-control" placeholder="Search" style="margin-top: 78px; margin-bottom: 78px"/>
                     <span class="input-group-btn">
                         <button class="btn btn-danger" type="button">
                             <span class=" glyphicon glyphicon-search"></span>
@@ -57,7 +57,7 @@
             </div>
             <div class="col-md-2">
                 <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="margin-top: 20px; margin-bottom: 20px">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="margin-top: 78px; margin-bottom: 20px">
                         All Categories
                         <span class="caret"></span>
                     </button>
@@ -74,12 +74,14 @@
 
 <hr>
 
-<h1 id="featured">Featured</h1>
+<div class="col-md-3 text-center">
+    <h1 id="featured" style="padding:1px; border:1px solid #021a40">Featured</h1>
+</div>
 
 <br>
 
 <div class="container">
-    <div class="col-xs-12">
+<div class="col-xs-12">
         <div class="carousel slide" id="myCarousel">
             <div class="carousel-inner">
                 <div class="item active">
@@ -250,24 +252,46 @@
             <!-- /.control-box -->
 
         </div><!-- /#myCarousel -->
+</div><!-- /.col-xs-12 -->          
 
-    </div><!-- /.col-xs-12 -->
-</div>
+</div><!-- /.container -->
+
 <hr>
 <!-- middle section -->
+
 <section>
     <div class="container">
             <div class="row">        
-                <span class="col-md-3 text-center" id="deals"><h1>Daily Deals</h1></span>
+                <div class="col-md-3 text-center"> 
+                    <h1 id="deals" style="padding:1px; border:1px solid #021a40">Daily Deals</h1>
+                </div>
             </div>
             <br>
             <div class="row">
                 <div class="col-md-5" text-center>
                         <img src="img/moltres.png" class="img-responsive center-block" width="406" height="257" style="padding:1px; border:1px solid #021a40">
+                                <br>
+                                <div class="caption" style="padding:1px; border:1px solid #021a40; background-color: #ffffff; opacity: 0.9">
+                                    <h4>Praesent commodo</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                    consequat.</p>
+                                    <a class="btn btn-mini" href="#">» Read More</a>
+                                </div>                        
                 </div>
                 <div class="col-md-2"></div>
                 <div class="col-md-5">
                         <img src="img/moltres.png" class="img-responsive center-block" width="406" height="257" style="padding:1px; border:1px solid #021a40">
+                                <br>
+                                <div class="caption" style="padding:1px; border:1px solid #021a40; background-color: #ffffff; opacity: 0.9">
+                                    <h4>Praesent commodo</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                    consequat.</p>
+                                    <a class="btn btn-mini" href="#">» Read More</a>
+                                </div>                                  
                 </div>
             </div>
     </div>
