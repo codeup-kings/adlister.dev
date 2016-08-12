@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . '/Model.php';
+
 class Item extends Model
 {
 	protected static $table = 'items';
@@ -11,11 +13,13 @@ class Item extends Model
 	public static function getUserItems($id)
 	{
 		self::dbConnect();
-		$query = 'SELECT * FROM ' . self::$table . 'WHERE user_id = :user_id ORDER BY id DESC';
+		$query = 'SELECT * FROM ' . self::$table . ' WHERE user_id = :user_id ORDER BY id DESC';
 		$stmt = self::$dbc->prepare($query);
-		$stmt->bindValue(':user_id', $id, PDO::PARAM_INT);
+		$stmt->bindValue(':user_id', intval($id), PDO::PARAM_INT);
 		$stmt->execute();
 		$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+		$instance = null;
 
 		if ($results)
 		{
