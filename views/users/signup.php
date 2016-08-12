@@ -21,6 +21,12 @@
 	                </div>
 	                <?php unset($_SESSION['SUCCESS_MESSAGE']); ?>
 	            <?php endif; ?>
+				<?php if (isset($_SESSION['DUPLICATE_MESSAGE'])) : ?>
+					<div class="alert alert-danger">
+						<p class="error"><?= $_SESSION['DUPLICATE_MESSAGE']; ?></p>
+					</div>
+					<?php unset($_SESSION['DUPLICATE_MESSAGE']); ?>
+				<?php endif; ?>
 
 				<form method="POST" action="" data-validation data-required-message="This field is required">
 
