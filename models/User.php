@@ -47,7 +47,10 @@ class User extends Model {
         return $instance;
     }
 
-
+	public function showItems()
+	{
+		return Item::getUserItems($this->id);
+	}
 }
 
 ?>
