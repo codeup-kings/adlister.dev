@@ -1,13 +1,14 @@
 <?php //require __DIR__ . '../../database/db_connect.php' ?>
-<?php var_dump($_SESSION) ?>
-<div class="container">
+
+<div class="container" style="padding-top: 6%">
 
 	<section id="login">
 
 		<div class="row">
 
-			<h1 class="section-title">Login To Pokemon Black Market</h1>
+			<div class="container-fluid text-center" id="home-logo"><img class="center-block img-responsive" style="padding:1px; border:1px solid #021a40" src="img/pokemon_logo.jpg"></div>
 
+		</div>
 			<?php if (isset($_SESSION['ERROR_MESSAGE'])) : ?>
                 <div class="alert alert-danger">
                     <p class="error"><?= $_SESSION['ERROR_MESSAGE']; ?></p>
@@ -20,32 +21,31 @@
                 </div>
                 <?php unset($_SESSION['SUCCESS_MESSAGE']); ?>
             <?php endif; ?>
+            <br>
+            <div class="row">
+				<div class="col-md-6 col-md-offset-3">
 
-			<div class="col-md-6 col-md-offset-3">
+					<form method="POST" data-validation data-required-message="This field is required">
 
-				<form method="POST" data-validation data-required-message="This field is required">
-
-					<div class="form-group">
-					    <input type="text" class="form-control" id="username" name="username" placeholder="Email/Username" autofocus data-required>
-					</div>
-					<div class="form-group">
-					    <input type="password" class="form-control" id="password" name="password" placeholder="Password" data-required>
-					</div>
-					<div class="row">
-						<div class="col-sm-6">
-							<button type="submit" class="btn btn-primary">Login</button>
+						<div class="form-group">
+						    <input type="text" class="form-control" id="username" name="username" placeholder="Email/Username" autofocus data-required>
 						</div>
-						<div class="col-sm-6 text-right">
-							<small>Not a member? Register!</small>
-							<a href="/signup" class="btn btn-success">Sign Up</a>
+						<div class="form-group">
+						    <input type="password" class="form-control" id="password" name="password" placeholder="Password" data-required>
 						</div>
-					</div>
-				</form>
+						<div class="row">
+							<div class="col-sm-6">
+								<button type="submit" class="btn btn-primary">Login</button>
+							</div>
+							<div class="col-sm-6 text-right">
+								<small>Not a member? Register!</small>
+								<a href="/signup" class="btn btn-warning">Sign Up</a>
+							</div>
+						</div>
+					</form>
 
+				</div>
 			</div>
-
-		</div>
-
 	</section>
 
 </div>

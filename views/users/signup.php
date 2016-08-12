@@ -1,10 +1,12 @@
-<div class="container">
+<div class="container" style="padding: 6%">
 
 	<section id="login">
 
 		<div class="row">
 
-			<h1 class="section-title">Register at the Pokemon Black Market</h1>
+			<div class="container-fluid text-center" id="home-logo"><img class="center-block img-responsive" style="padding:1px; border:1px solid #021a40" src="img/pokemon_logo.jpg"></div>
+
+		</div>
 
 			<div class="col-md-6 col-md-offset-3">
 
@@ -44,11 +46,11 @@
 					</div>
 					<div class="row">
 						<div class="col-sm-6">
-							<button type="submit" class="btn btn-primary">Signup</button>
+							<button type="submit" class="btn btn-primary">Sign Up</button>
 						</div>
 						<div class="col-sm-6 text-right">
 							<small>Already registered? Login!</small>
-							<a href="/login" class="btn btn-success">Login</a>
+							<a href="/login" class="btn btn-warning">Login</a>
 						</div>
 					</div>
 
