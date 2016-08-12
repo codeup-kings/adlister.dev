@@ -18,21 +18,37 @@ function pageController()
         case "/login":
 			$main_view= '../views/users/login.php';
 			verifyLogin();
-			checkIfLoggedInLoginPage();
+			checkIfLoggedIn();
             break;
         //not done
         case "/signup":
-            $main_view= '../views/users/signup.php';
+            checkIfLoggedIn();
+			addNewUser();
+        	$main_view= '../views/users/signup.php';
             break;
         case "/user/account":
         	checkIfLoggedInUserPage();
-			Auth::user();
+			$data['user'] = Auth::user();
+//to be created			$data['items'] = $data['user']->items();
             $main_view= '../views/users/account.php';
             break;
-        case "/logout":
+		case "/logout":
         	Auth::logout();
-			$main_view= '../views/partials/navbar.php';
+			header('Location: /');
+			die();
             break;
+		case "/ads":
+			$main_view= '../views/ads/index.php';
+			break;
+		case "/ads/create":
+			$main_view= '../views/ads/create.php';
+			break;
+		case "/ads/edit":
+			$main_view= '../views/ads/edit.php';
+			break;
+		case "/ads/show":
+			$main_view= '../views/ads/show.php';
+			break;
         default:    // displays 404 if route not specified above
             $main_view = '../views/404.php';
             break;
