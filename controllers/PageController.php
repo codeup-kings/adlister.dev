@@ -20,7 +20,7 @@ function pageController()
 			verifyLogin();
 			checkIfLoggedIn();
             break;
-        //not done
+        //almost done
         case "/signup":
             checkIfLoggedIn();
 			addNewUser();
@@ -28,8 +28,8 @@ function pageController()
             break;
         case "/user/account":
         	checkIfLoggedInUserPage();
-			$data['user'] = Auth::user();
-//to be created			$data['items'] = $data['user']->items();
+			$data['user'] = User::find(Input::get('id'));
+			$data['items'] = $data['user']->showItems();
             $main_view= '../views/users/account.php';
             break;
 		case "/logout":
@@ -41,6 +41,7 @@ function pageController()
 			$main_view= '../views/ads/index.php';
 			break;
 		case "/ads/create":
+			saveUploadedImage(Input::get(['upload']));
 			$main_view= '../views/ads/create.php';
 			break;
 		case "/ads/edit":

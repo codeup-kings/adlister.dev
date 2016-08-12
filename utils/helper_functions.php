@@ -18,9 +18,24 @@ function saveUploadedImage($input_name)
         {
 
             $tempFile = $_FILES[$input_name]['tmp_name'];
-                $image_url = '/img/uploads' . $input_name;
-                move_uploaded_file($tempFile, __DIR__ .'/../public' . $image_url);
-                return $image_url;
+			$newName = substr($tempFile, 4);
+			$fileExtension = pathinfo($_FILES[$input_name]['name'], PATHINFO_EXTENSION);
+
+			if( $fileExtension != 'jpg' && $fileExtension != 'jpeg' && $fileExtension != 'png' && $fileExtension != 'gif') {
+				$valid  = false;
+			}
+
+			if ($_FILES[$input_name]["size"] > 5000000) {
+				$valid = false;
+			}
+
+			if ($valid) {
+				$image_url = '/img/uploads' . $newName . '.' . $fileExtension;
+				move_uploaded_file($tempFile, __DIR__ . '/../public' . $image_url);
+				return $image_url;
+			} else {
+				return null;
+			}
         }
 
     }
