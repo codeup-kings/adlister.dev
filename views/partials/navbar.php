@@ -8,9 +8,9 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Sign In</a>
+      <a class="navbar-brand" href="#">Login</a>
         <span id="navbarOr">or</span>
-      <a class="navbar-brand" href="#">Register</a>      
+      <a class="navbar-brand" href="#">Sign Up</a>      
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
