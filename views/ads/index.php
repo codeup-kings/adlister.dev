@@ -22,7 +22,7 @@
             <?php foreach($items->attributes as $key => $item) : ?>
             	<div class="col-md-4">
             		<h3 class="text-center"><?= $item['name']; ?></h3>
-            		<img src="<?= $item['image_url']; ?>" class="img-responsive center-block">
+            		<img src="<?= $item['image_file']; ?>" class="img-responsive center-block">
 
             		<p>
             			<?= substr($item['description'], 0, 100) . "...";?>
