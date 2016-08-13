@@ -7,5 +7,5 @@ return array(
     'DB_USER' => 'model_user',
     'DB_PASS' => 'adlister',
 
-    // 'USER_PASS' => '',
+    'USER_PASS' => 'password',
 );

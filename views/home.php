@@ -1,4 +1,5 @@
 <?php require '../views/partials/navbar.php'?>
+
 <section>
     <div class="container">
         <div class="row">
@@ -32,8 +33,12 @@
 
 <hr>
 
-<div class="col-md-3 text-center">
-    <h1 id="featured" style="padding:1px; border:1px solid #021a40">Featured</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 text-center">
+            <h1 id="featured" style="padding:1px; border:1px solid #021a40">Featured</h1>
+        </div>
+    </div>
 </div>
 
 <br>
@@ -265,7 +270,7 @@
                         <tr>
                             <td>
                                 <ul>
-                                    <li><h5><a href="#">Sign In</a></h5></li>
+                                    <li><h5><a href="../login">Sign In</a></h5></li>
                                 </ul>
                             </td>                    
                             <td>
