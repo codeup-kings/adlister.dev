@@ -27,7 +27,7 @@
 					    <input type="text" class="form-control" id="name" name="name" placeholder="Name" data-required>
 					</div>
 					<div class="form-group">
-					    <input type="text" class="form-control" id="price" price="price" placeholder="Price" data-required data-validate="currency" data-message="Price must be number/s with decimals.">
+					    <input type="text" class="form-control" id="cost" cost="cost" placeholder="Cost" data-required data-validate="currency" data-message="Price must be number/s with decimals.">
 					</div>	
 					<div class="form-group">
 					    <textarea class="form-control" id="description" description="description" placeholder="Description" rows="8" data-required>

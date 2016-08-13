@@ -56,6 +56,14 @@ function checkIfLoggedInUserPage() {
 	}
 }
 
+//logs out current user and redirects to login page
+function logoutUser() 
+{
+	Auth::logout();
+	header('Location: /login');
+	die();
+}
+
 function verifyLogin() {
     if (!empty($_POST) && Auth::attempt(Input::get('username'), Input::get('password')))
 	{
@@ -90,3 +98,29 @@ function addNewUser() {
 		}
 	}
 }
+
+// checks if information was submitted in POST request
+// if so, takes submitted info and updates the specified
+// item if owned by the logged in user
+function updateItemWithInputIfExists()
+{
+    if (hasInput('POST'))
+    {
+        $item = Item::find( Input::get('id') );
+        if ($item->user_id == Auth::user()->id)
+        {
+            $item->name = Input::get('name');
+            $item->price = removeMoneyCharacters(Input::get('price'));
+            $item->description = Input::get('description');
+            $image_url = saveUploadedImage('image');
+            if ($image_url != null)
+            {
+                $item->image_url = $image_url;
+            }
+            $item->save();
+            header('Location: /items');
+            die();
+        }
+    }
+}
+
