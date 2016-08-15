@@ -27,10 +27,10 @@
 					    <input type="text" class="form-control" id="name" name="name" placeholder="Name" data-required>
 					</div>
 					<div class="form-group">
-					    <input type="text" class="form-control" id="cost" cost="cost" placeholder="Cost" data-required data-validate="currency" data-message="Price must be number/s with decimals.">
+					    <input type="text" class="form-control" id="cost" name="cost" placeholder="Cost" data-required data-validate="currency" data-message="Price must be number/s with decimals.">
 					</div>	
 					<div class="form-group">
-					    <textarea class="form-control" id="description" description="description" placeholder="Description" rows="8" data-required>
+					    <textarea class="form-control" id="description" name="description" placeholder="Description" rows="8" data-required>
 					    </textarea>
 					</div>		
 					<div class="form-group">
@@ -38,7 +38,7 @@
 					    <input type="file" id="image" name="image" placeholder="Image">
 					</div>
 
-					<button type="submit" class="btn btn-primary">Upload Item</button>							
+					<button type="submit" name="upload" class="btn btn-primary">Upload Item</button>
 
 				</form>
 			</div>

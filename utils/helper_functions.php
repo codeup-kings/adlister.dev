@@ -4,7 +4,7 @@
 
 
 // takes image from form submission and moves it into the uploads directory
-function saveUploadedImage($input_name)
+function saveImage($input_name)
 {
 
     $valid = true;
@@ -13,7 +13,6 @@ function saveUploadedImage($input_name)
     if(isset($_FILES[$input_name]) && $_FILES[$input_name]['name'])
     {
 
-        // checks if there are any errors on the upload from the submission
         if(!$_FILES[$input_name]['error'])
         {
 
@@ -42,9 +41,35 @@ function saveUploadedImage($input_name)
     return null;
 }
 
+function uploadImage() {
+	if (hasInput('POST')) {
+		$item = new Item();
+		$item->name = Input::get('name');
+		$item->cost = Input::get('cost');
+		$item->description = Input::get('description');
+		$file =saveImage('image');
+		$item->image_file = $file;
+		$item->user_id = Auth::user()->id;
+		$item->save();
+		header('Location: /ads/show?id=' . $item->id);
+		die();
+	}
+}
+
+function hasInput($request_type = 'ALL')
+{
+	if ($request_type == 'ALL') {
+		return !empty(Input::all());
+	} else if ($request_type == 'POST') {
+		return !empty($_POST);
+	} else {
+		return !empty($_GET);
+	}
+}
+
 function checkIfLoggedIn() {
 	if (Auth::check()){
-		header('Location: /user/account');
+		header('Location: /user/account?id=' . Auth::user()->id);
 		die();
 	}
 }
@@ -67,7 +92,7 @@ function logoutUser()
 function verifyLogin() {
     if (!empty($_POST) && Auth::attempt(Input::get('username'), Input::get('password')))
 	{
-		header('Location: /user/account');
+		header('Location: /user/account?id=' . Auth::user()->id);
 		die();
 	}
 }
@@ -110,7 +135,7 @@ function updateItemWithInputIfExists()
         if ($item->user_id == Auth::user()->id)
         {
             $item->name = Input::get('name');
-            $item->price = removeMoneyCharacters(Input::get('price'));
+            $item->cost = Input::get('cost');
             $item->description = Input::get('description');
             $image_url = saveUploadedImage('image');
             if ($image_url != null)
