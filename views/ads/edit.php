@@ -3,9 +3,13 @@
 	<section>
 
 		<div class="row">
+<<<<<<< HEAD
 
 			<h1 class="section-title">Add New Item For Sale</h1>
 
+=======
+			<h2 class="col-md-3 text-center" id="create-title">Edit Item</h2>
+>>>>>>> master
 		</div>
 
 	</section>
@@ -36,11 +40,19 @@
 					</div>
 
 					<div class="form-group">
+<<<<<<< HEAD
 						<input type="text" class="form-control" id="price" name="cost" placeholder="Cost" value="<?= $item->cost; ?>" data-required data-validate="currency" data-message="Price field needs to be a number that can include decimals. No $ or ,">
 					</div>
 
 					<div class="form-group">
 						<textarea class="form-control" name="description" id="description" placeholder="Description" rows="10" data-required><?= $item->description; ?></textarea>
+=======
+					    <input type="text" class="form-control" id="cost" name="cost" placeholder="Cost" value="<?= $item->cost; ?>" data-required data-validate="currency" data-message="Price must be number/s with decimals.">
+					</div>	
+
+					<div class="form-group">
+					    <textarea class="form-control" id="description" name="description" placeholder="Description" rows="10" value="<?= $item->description; ?>" data-required></textarea>
+>>>>>>> master
 					</div>
 
 					<div class="form-group">

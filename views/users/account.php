@@ -26,7 +26,11 @@
             <p class="text-center">Email: <?= $user->email; ?></p>
             <?php if($user->id == Auth::id()) : ?>
                 <div class="col-sm-12 text-center">
+<<<<<<< HEAD
                     <a href="/user/edit?id=<?= $user->id; ?>" class="btn btn-primary"><i class="fa fa-pencil"></i> Edit Profile</a>
+=======
+                    <a href="/users/edit?id=<?= $user->id; ?>" class="btn btn-primary"><i class="fa fa-pencil"></i> Edit Profile</a>
+>>>>>>> master
                 </div>
             <?php endif; ?>
         </div>
@@ -39,10 +43,10 @@
         </div>
         <div class="row">
             <?php foreach($items->attributes as $key => $item) : ?>
-            <div class="col-md-4">
+            <div class="col-md-12">
                 <h4 class="text-center"><?= $item['name']; ?></h4>
-                <img src="<?= $item['image_file']; ?>" class="img-responsive center-block">
-                <p>
+                <img src="<?= $item['image_file']; ?>" class="text-center img-responsive center-block">
+                <p style="font-size: large">
                     <?= substr($item['description'], 0, 100) . "..."; ?>
                 </p>
                 <p>

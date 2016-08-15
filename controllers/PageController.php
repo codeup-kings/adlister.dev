@@ -51,17 +51,28 @@ function pageController()
 			$main_view= '../views/ads/create.php';
 			break;
 		case "/ads/edit":
+<<<<<<< HEAD
 
 			$data['item'] = Item::find(Input::get('id'));
+=======
+            updateItemWithInputIfExists();
+            $data['item'] = Item::find(Input::get('id'));
+>>>>>>> master
 			$main_view= '../views/ads/edit.php';
 			break;
 		case "/ads/show":
 			$data['item'] = Item::find(Input::get('id'));
 			$main_view= '../views/ads/show.php';
 			break;
+<<<<<<< HEAD
 		case "/ads/delete":
 			deleteItem();
 			break;
+=======
+        case "/ads/delete";
+            deleteItem();
+            break;
+>>>>>>> master
         default:    // displays 404 if route not specified above
             $main_view = '../views/404.php';
             break;

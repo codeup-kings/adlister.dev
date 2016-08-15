@@ -115,7 +115,7 @@ li { list-style-type:none;}
 ::selection { background: #ff5e99; color: #FFFFFF; text-shadow: 0; }
 ::-moz-selection { background: #ff5e99; color: #FFFFFF; }
 
-#deals, #featured, #for-sale {
+#deals, #featured, #for-sale, #create-title {
     color: #020617;
     background-color: #ffffff;
     opacity: 0.9;
