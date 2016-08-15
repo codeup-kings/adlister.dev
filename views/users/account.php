@@ -26,11 +26,7 @@
             <p class="text-center">Email: <?= $user->email; ?></p>
             <?php if($user->id == Auth::id()) : ?>
                 <div class="col-sm-12 text-center">
-<<<<<<< HEAD
                     <a href="/user/edit?id=<?= $user->id; ?>" class="btn btn-primary"><i class="fa fa-pencil"></i> Edit Profile</a>
-=======
-                    <a href="/users/edit?id=<?= $user->id; ?>" class="btn btn-primary"><i class="fa fa-pencil"></i> Edit Profile</a>
->>>>>>> master
                 </div>
             <?php endif; ?>
         </div>

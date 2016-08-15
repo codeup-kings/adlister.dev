@@ -13,10 +13,10 @@ function pageController()
     // switch that will run functions and setup variables dependent on what route was accessed
     switch ($request) {
         case "/":
-            $main_view= '../views/home.php';
+            $main_view = '../views/home.php';
             break;
         case "/login":
-			$main_view= '../views/users/login.php';
+			$main_view = '../views/users/login.php';
 			verifyLogin();
 			checkIfLoggedIn();
             break;
@@ -24,7 +24,7 @@ function pageController()
         case "/signup":
             checkIfLoggedIn();
 			addNewUser();
-        	$main_view= '../views/users/signup.php';
+        	$main_view = '../views/users/signup.php';
             break;
         case "/user/account":
         	checkIfLoggedInUserPage();
@@ -35,7 +35,7 @@ function pageController()
 		case "/user/edit":
 			checkIfLoggedInUserPage();
 			$data['user'] = User::find(Input::get('id'));
-			$main_view= '../views/users/edit.php';
+			$main_view = '../views/users/edit.php';
 			break;
 		case "/logout":
         	Auth::logout();
@@ -44,35 +44,24 @@ function pageController()
             break;
 		case "/ads":
 			$data['items'] = Item::all();
-			$main_view= '../views/ads/index.php';
+			$main_view = '../views/ads/index.php';
 			break;
 		case "/ads/create":
 			uploadImage();
-			$main_view= '../views/ads/create.php';
+			$main_view = '../views/ads/create.php';
 			break;
 		case "/ads/edit":
-<<<<<<< HEAD
-
 			$data['item'] = Item::find(Input::get('id'));
-=======
             updateItemWithInputIfExists();
-            $data['item'] = Item::find(Input::get('id'));
->>>>>>> master
-			$main_view= '../views/ads/edit.php';
+			$main_view = '../views/ads/edit.php';
 			break;
 		case "/ads/show":
 			$data['item'] = Item::find(Input::get('id'));
-			$main_view= '../views/ads/show.php';
+			$main_view = '../views/ads/show.php';
 			break;
-<<<<<<< HEAD
 		case "/ads/delete":
 			deleteItem();
 			break;
-=======
-        case "/ads/delete";
-            deleteItem();
-            break;
->>>>>>> master
         default:    // displays 404 if route not specified above
             $main_view = '../views/404.php';
             break;
