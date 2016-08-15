@@ -16,9 +16,11 @@
                 </div>
                 <?php unset($_SESSION['SUCCESS_MESSAGE']); ?>
             <?php endif; ?>           
-
-            <h1><?= $item->name; ?></h1>
-
+        <div class="container">
+        	<div class="row">
+            	<h1 class="col-md-3 text-center" id="create-title"><?= $item->name; ?></h1>
+            </div>
+        </div>
             <div class="col-md-6">
             	<img src="<?= $item->image_file; ?>" class="img-responsive center-block">
             </div>
