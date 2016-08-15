@@ -34,6 +34,7 @@ function pageController()
             break;
 		case "/user/edit":
 			checkIfLoggedInUserPage();
+			updateUserWithInputIfExists();
 			$data['user'] = User::find(Input::get('id'));
 			$main_view = '../views/users/edit.php';
 			break;
