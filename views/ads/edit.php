@@ -2,7 +2,7 @@
 
 	<section>
 		<div class="row">
-			<h2 class="create-title">Edit Item</h2>
+			<h2 class="col-md-3 text-center" id="create-title">Edit Item</h2>
 		</div>
 	</section>
 
@@ -33,11 +33,11 @@
 					</div>
 
 					<div class="form-group">
-					    <input type="text" class="form-control" id="email" email="email" placeholder="Email" value="<?= $item->email; ?>" data-required data-validate="currency" data-message="Price must be number/s with decimals.">
+					    <input type="text" class="form-control" id="cost" name="cost" placeholder="Cost" value="<?= $item->cost; ?>" data-required data-validate="currency" data-message="Price must be number/s with decimals.">
 					</div>	
 
 					<div class="form-group">
-					    <textarea class="form-control" id="description" description="description" placeholder="Description" rows="10" value="<?= $item->description; ?>" data-required></textarea>
+					    <textarea class="form-control" id="description" name="description" placeholder="Description" rows="10" value="<?= $item->description; ?>" data-required></textarea>
 					</div>
 
 					<div class="form-group">

@@ -40,8 +40,8 @@
 		<div class="row">
 			<div class="col-md-12 text-center">
 				<a href="/ads/edit?id=<?= $item->id; ?>" class="btn btn-success"></i>Edit Item</a>
-				<a href="#" class="btn btn-danger"><i class="fa fa-trash"></i>Delete Item</a>
-				<form action="/ads/delete" method="POST">
+				<a href="#" class="btn btn-danger" id="delete-item"><i class="fa fa-trash"></i>Delete Item</a>
+				<form action="/ads/delete" method="POST" id="delete-item-form">
 					<input type="hidden" name="id" value="<?= $item->id; ?>">
 				</form>
 			</div>
