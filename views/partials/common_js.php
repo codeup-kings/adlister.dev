@@ -7,6 +7,7 @@
 			e.preventDefault();
 			$('#delete-item-form').submit();
 		});
+
 		setTimeout(function() {
 			$('.alert').slideUp(1500);
 		}, 5000);
