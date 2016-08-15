@@ -169,6 +169,21 @@ function updateItemWithInputIfExists()
 	}
 }
 
+function updateUserWithInputIfExists()
+{
+	if (hasInput('POST') && Input::get('id') == Auth::id())
+	{
+		$user = User::find(Input::get('id'));
+		$user->name = Input::get('name');
+		$user->email = Input::get('email');
+		$user->username = Input::get('username');
+		$user->save();
+		header('Location: /user/account?id=' . Auth::user()->id);
+		die();
+
+	}
+}
+
 function convertToMoney($number, $cents = 2)
 {
 
