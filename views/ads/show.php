@@ -28,7 +28,7 @@
             		<?= $item->description; ?>
             	</p>
 
-            	<p class="show-page">Cost: <?= convertToMoney($item->cost); ?></p>
+            	<p class="show-page">Cost: <?= ($item->cost); ?></p>
 
             	<h3>Seller Info</h3>
             	<p class="show-page"><a href="/users/account?id=<?= $item->user_id; ?>"><?= $item->user()->name; ?></a></p>
