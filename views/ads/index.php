@@ -25,7 +25,7 @@
             	<div class="col-md-2">
             		<h3 class="text-center"><?= $item['name']; ?></h3>
             		<img src="<?= $item['image_file']; ?>" class=" text-center img-responsive center-block">
-            		<h2 class="text-center"><?= convertToMoney($item['cost']); ?></h2>
+            		<h2 class="text-center"><?= ($item['cost']); ?></h2>
             		<p id="poke-description">
             			<?= substr($item['description'], 0, 100) . "...";?>
             		</p>

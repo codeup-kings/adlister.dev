@@ -1,8 +1,11 @@
 <div class="container">
 	<section>
-		<div class="row">
-			<h2 class="create-title">Add Item for Sale</h2>
+		<div class="container">
+			<div class="row">
+				<h2 class="col-md-3 text-center" id="create-title">Add Item for Sale</h2>
+			</div>
 		</div>
+		</section>
 	</section>
 	<section>		
 		<div class="row">

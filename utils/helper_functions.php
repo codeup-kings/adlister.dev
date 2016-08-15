@@ -137,15 +137,24 @@ function updateItemWithInputIfExists()
             $item->name = Input::get('name');
             $item->cost = Input::get('cost');
             $item->description = Input::get('description');
-            $image_url = saveUploadedImage('image');
-            if ($image_url != null)
+            $image_file = saveImage('image');
+            if ($image_file != null)
             {
-                $item->image_url = $image_url;
+                $item->image_file = $image_file;
             }
             $item->save();
-            header('Location: /items');
+            header('Location: /ads');
             die();
         }
     }
+}
+
+function deleteItem(){
+	$item = Item::find(Input::get('id'));
+
+	$item->delete();
+	$_SESSION['SUCCESS_MESSAGE'] = 'Post successfully deleted';
+	header('Location: /user/account?id=' . Auth::user()->id);
+	die();
 }
 
