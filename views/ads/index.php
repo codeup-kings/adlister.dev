@@ -1,7 +1,9 @@
 <div class="container">
 	<section>
 		<div class="row">
-		<h2 class="for-sale-title">Items for Sale in Pokemon Black Market</h2>
+		<a href="/"><img class="center-block img-responsive" href="/" style="padding:1px; border:1px solid #021a40" src="img/pokemon_logo.jpg"></a>
+		
+		<h2 class="col-md-3 text-center" id=for-sale>For Sale</h2>
 		</div>
 	
 		<div class="row">
@@ -20,11 +22,11 @@
             <?php endif; ?>
 
             <?php foreach($items->attributes as $key => $item) : ?>
-            	<div class="col-md-4">
+            	<div class="col-md-2">
             		<h3 class="text-center"><?= $item['name']; ?></h3>
-            		<img src="<?= $item['image_file']; ?>" class="img-responsive center-block">
-
-            		<p>
+            		<img src="<?= $item['image_file']; ?>" class=" text-center img-responsive center-block">
+            		<h2 class="text-center"><?= convertToMoney($item['cost']); ?></h2>
+            		<p id="poke-description">
             			<?= substr($item['description'], 0, 100) . "...";?>
             		</p>
             		<p>
