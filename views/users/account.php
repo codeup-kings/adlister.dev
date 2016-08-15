@@ -46,7 +46,7 @@
                     <?= substr($item['description'], 0, 100) . "..."; ?>
                 </p>
                 <p>
-                    <a href="/ads/show.php?id=<?= $item['id']; ?>">See More</a>
+                    <a href="/ads/show?id=<?= $item['id']; ?>">See More</a>
                 </p>
             </div>
             <?php if (($key + 1) % 3 == 0) : ?>
@@ -57,7 +57,7 @@
         </div>
         <?php if($user->id == Auth::id()) : ?>
             <div class="row text-center">
-                <a href="/ads/create.php" class="btn btn-success">Create a new ad</a>
+                <a href="/ads/create" class="btn btn-success">Create a new ad</a>
             </div>
         <?php endif; ?>
 

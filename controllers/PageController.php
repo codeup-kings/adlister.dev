@@ -38,16 +38,18 @@ function pageController()
 			die();
             break;
 		case "/ads":
+			$data['items'] = Item::all();
 			$main_view= '../views/ads/index.php';
 			break;
 		case "/ads/create":
-			saveUploadedImage(Input::get(['upload']));
+			uploadImage();
 			$main_view= '../views/ads/create.php';
 			break;
 		case "/ads/edit":
 			$main_view= '../views/ads/edit.php';
 			break;
 		case "/ads/show":
+			$data['item'] = Item::find(Input::get('id'));
 			$main_view= '../views/ads/show.php';
 			break;
         default:    // displays 404 if route not specified above
