@@ -13,6 +13,7 @@ function pageController()
     // switch that will run functions and setup variables dependent on what route was accessed
     switch ($request) {
         case "/":
+			$data['items'] = Item::featuredItems();
             $main_view = '../views/home.php';
             break;
         case "/login":

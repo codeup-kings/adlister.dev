@@ -37,7 +37,7 @@ class Item extends Model
 
 	
 
-	public static function featuredItems($num = 5) {
+	public static function featuredItems($num = 4) {
 		self::dbConnect();
 
 		$query = 'SELECT * FROM ' . self::$table . ' ORDER BY id desc LIMIT ' . $num;

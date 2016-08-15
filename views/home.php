@@ -43,109 +43,34 @@
 <br>
 
 <div class="container">
-<div class="col-xs-12">
+    <div class="col-xs-12">
         <div class="carousel slide" id="myCarousel">
             <div class="carousel-inner">
                 <div class="item active">
                     <ul class="thumbnails">
+                        <?php foreach($items->attributes as $key => $item) : ?>
                         <li class="col-sm-3">
                             <div class="fff">
                                 <div class="thumbnail">
-                                    <a href="ads/show?id=5"><img src="img/machamp.png" class="img-size" alt="" style="padding:1px; border:1px solid #021a40; width:360px;height:240px;"></a>
+                                    <img src="<?= $item['image_file']; ?>" class="img-size" alt="" style="padding:1px; border:1px solid #021a40; width:360px;height:240px;">
                                 </div>
                                 <div class="caption">
-                                    <h4>Machump</h4>
-                                    <a class="btn btn-mini" href="ads/show?id=5">» Read More</a>
+                                    <h4 class="text-center"><?= $item['name']; ?></h4>
+                                    <p>
+                                        <?= substr($item['description'], 0, 100) . "..."; ?>
+                                    </p>
                                 </div>
+                                <p>
+                                    <a class="btn btn-mini" href="/ads/show?id=<?= $item['id']; ?>">Read More</a>
+                                </p>
                             </div>
-                        </li>
-                        <li class="col-sm-3">
-                            <div class="fff">
-                                <div class="thumbnail">
-                                    <a href="#"><img src="img/charizard.png" class="img-size" alt="" style="padding:1px; border:1px solid #021a40; width:360px;height:240px;"></a>
-                                </div>
-                                <div class="caption">
-                                    <h4>Charring Chardaddy</h4>
-                                    <a class="btn btn-mini" href="ads/show?id=6">» Read More</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-sm-3">
-                            <div class="fff">
-                                <div class="thumbnail">
-                                    <a href="#"><img src="img/kadabra.png" class="img-size" alt="" style="padding:1px; border:1px solid #021a40; width:360px;height:240px;"></a>
-                                </div>
-                                <div class="caption">
-                                    <h4>Ka Dab Dabra</h4>
-                                    <a class="btn btn-mini" href="ads/show?id=11">» Read More</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-sm-3">
-                            <div class="fff">
-                                <div class="thumbnail">
-                                    <a href="#"><img src="img/grimer.png" class="img-size" alt="" style="padding:1px; border:1px solid #021a40; width:360px;height:240px;"></a>
-                                </div>
-                                <div class="caption">
-                                    <h4>Grimer</h4>
-                                    <a class="btn btn-mini" href="ads/show?id=3">» Read More</a>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+                            <?php if (($key + 1) % 4 == 0) : ?>
                 </div>
-
-                <div class="item">
-                    <ul class="thumbnails">
-                        <li class="col-sm-3">
-                            <div class="fff">
-                                <div class="thumbnail ">
-                                    <a href="#"><img src="img/squirtle.png" class="img-size" alt="" style="padding:1px; border:1px solid #021a40; width:360px;height:240px;"></a>
-                                </div>
-                                <div class="caption">
-                                    <h4>Flying Squirtle</h4>
-                                    <a class="btn btn-mini" href="/ads/show?id=7">» Read More</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-sm-3">
-                            <div class="fff">
-                                <div class="thumbnail">
-                                    <a href="#"><img src="img/rhyhorn.png" class="img-size" alt="" style="padding:1px; border:1px solid #021a40; width:360px;height:240px;"></a>
-                                </div>
-                                <div class="caption">
-                                    <h4>Why Horn</h4>
-                                    <a class="btn btn-mini" href="ads/show?id=8">» Read More</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-sm-3">
-                            <div class="fff">
-                                <div class="thumbnail">
-                                    <a href="#"><img src="img/mewtwo.png" class="img-size" alt="" style="padding:1px; border:1px solid #021a40; width:360px;height:240px;"></a>
-                                </div>
-                                <div class="caption">
-                                    <h4>Mew2.o</h4>
-                                    <a class="btn btn-mini" href="ads/show?id=9">» Read More</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-sm-3">
-                            <div class="fff">
-                                <div class="thumbnail">
-                                    <a href="#"><img src="img/slobro.png" class="img-size" alt="" style="padding:1px; border:1px solid #021a40; width:360px;height:240px;"></a>
-                                </div>
-                                <div class="caption">
-                                    <h4>Come at me Slobro</h4>
-                                    <a class="btn btn-mini" href="ads/show?id=10">» Read More</a>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+                <div class="row">
+                    <?php endif; ?>
+                    <?php endforeach; ?>
                 </div>
             </div>
-
-
             <nav>
                 <ul class="control-box pager">
                     <li><a data-slide="prev" href="#myCarousel" class=""><i class="glyphicon glyphicon-chevron-left"></i></a></li>
@@ -154,9 +79,104 @@
             </nav>
 
         </div>
-</div>
+    </div>
 
 </div>
+            <!--                                </section>-->
+<!--                                <div class="thumbnail">-->
+<!--                                    <a href="ads/show?id=5"><img src="img/machamp.png" class="img-size" alt="" style="padding:1px; border:1px solid #021a40; width:360px;height:240px;"></a>-->
+<!--                                </div>-->
+<!--                                <div class="caption">-->
+<!--                                    <h4>Machump</h4>-->
+<!--                                    <a class="btn btn-mini" href="ads/show?id=5">» Read More</a>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                        <li class="col-sm-3">-->
+<!--                            <div class="fff">-->
+<!--                                <div class="thumbnail">-->
+<!--                                    <a href="#"><img src="img/charizard.png" class="img-size" alt="" style="padding:1px; border:1px solid #021a40; width:360px;height:240px;"></a>-->
+<!--                                </div>-->
+<!--                                <div class="caption">-->
+<!--                                    <h4>Charring Chardaddy</h4>-->
+<!--                                    <a class="btn btn-mini" href="ads/show?id=6">» Read More</a>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                        <li class="col-sm-3">-->
+<!--                            <div class="fff">-->
+<!--                                <div class="thumbnail">-->
+<!--                                    <a href="#"><img src="img/kadabra.png" class="img-size" alt="" style="padding:1px; border:1px solid #021a40; width:360px;height:240px;"></a>-->
+<!--                                </div>-->
+<!--                                <div class="caption">-->
+<!--                                    <h4>Ka Dab Dabra</h4>-->
+<!--                                    <a class="btn btn-mini" href="ads/show?id=11">» Read More</a>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                        <li class="col-sm-3">-->
+<!--                            <div class="fff">-->
+<!--                                <div class="thumbnail">-->
+<!--                                    <a href="#"><img src="img/grimer.png" class="img-size" alt="" style="padding:1px; border:1px solid #021a40; width:360px;height:240px;"></a>-->
+<!--                                </div>-->
+<!--                                <div class="caption">-->
+<!--                                    <h4>Grimer</h4>-->
+<!--                                    <a class="btn btn-mini" href="ads/show?id=3">» Read More</a>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                    </ul>-->
+
+<!--                <div class="item">-->
+<!--                    <ul class="thumbnails">-->
+<!--                        <li class="col-sm-3">-->
+<!--                            <div class="fff">-->
+<!--                                <div class="thumbnail ">-->
+<!--                                    <a href="#"><img src="img/squirtle.png" class="img-size" alt="" style="padding:1px; border:1px solid #021a40; width:360px;height:240px;"></a>-->
+<!--                                </div>-->
+<!--                                <div class="caption">-->
+<!--                                    <h4>Flying Squirtle</h4>-->
+<!--                                    <a class="btn btn-mini" href="/ads/show?id=7">» Read More</a>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                        <li class="col-sm-3">-->
+<!--                            <div class="fff">-->
+<!--                                <div class="thumbnail">-->
+<!--                                    <a href="#"><img src="img/rhyhorn.png" class="img-size" alt="" style="padding:1px; border:1px solid #021a40; width:360px;height:240px;"></a>-->
+<!--                                </div>-->
+<!--                                <div class="caption">-->
+<!--                                    <h4>Why Horn</h4>-->
+<!--                                    <a class="btn btn-mini" href="ads/show?id=8">» Read More</a>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                        <li class="col-sm-3">-->
+<!--                            <div class="fff">-->
+<!--                                <div class="thumbnail">-->
+<!--                                    <a href="#"><img src="img/mewtwo.png" class="img-size" alt="" style="padding:1px; border:1px solid #021a40; width:360px;height:240px;"></a>-->
+
+<!--                                </div>-->
+<!--                                <div class="caption">-->
+<!--                                    <h4>Mew2.o</h4>-->
+<!--                                    <a class="btn btn-mini" href="ads/show?id=9">» Read More</a>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                        <li class="col-sm-3">-->
+<!--                            <div class="fff">-->
+<!--                                <div class="thumbnail">-->
+<!--                                    <a href="#"><img src="img/slobro.png" class="img-size" alt="" style="padding:1px; border:1px solid #021a40; width:360px;height:240px;"></a>-->
+<!--                                </div>-->
+<!--                                <div class="caption">-->
+<!--                                    <h4>Come at me Slobro</h4>-->
+<!--                                    <a class="btn btn-mini" href="ads/show?id=10">» Read More</a>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                    </ul>-->
+<!--                </div>-->
+<!--            </div>-->
 
 <hr>
 
