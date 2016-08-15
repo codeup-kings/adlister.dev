@@ -22,9 +22,9 @@
             <?php endif; ?>
 
             <?php foreach($items->attributes as $key => $item) : ?>
-            	<div class="col-md-2">
-            		<h3 class="text-center"><?= $item['name']; ?></h3>
-            		<img src="<?= $item['image_file']; ?>" class=" text-center img-responsive center-block">
+            	<div class="col-md-3">
+            		<h4 class="text-center"><?= $item['name']; ?></h4>
+            		<img style="padding:1px; border:1px solid #021a40; width:360px;height:240px"; src="<?= $item['image_file']; ?>" class=" text-center img-responsive center-block">
             		<h2 class="text-center"><?= ($item['cost']); ?></h2>
             		<p id="poke-description">
             			<?= substr($item['description'], 0, 100) . "...";?>

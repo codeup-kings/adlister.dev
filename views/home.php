@@ -64,9 +64,12 @@
                                     <a class="btn btn-mini" href="/ads/show?id=<?= $item['id']; ?>">Read More</a>
                                 </p>
                             </div>
+                        </li>
                             <?php if (($key + 1) % 4 == 0) : ?>
+                    </ul>
                 </div>
-                <div class="row">
+                <div class="item">
+                    <ul class="thumbnails">
                     <?php endif; ?>
                     <?php endforeach; ?>
                 </div>
