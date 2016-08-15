@@ -9,6 +9,7 @@
 			<div class="col-md-6 col-md-offset-3">
 
 				<p>Please fill out the information below so we can update your account.</p>
+				
 				<?php if (isset($_SESSION['ERROR_MESSAGE'])) : ?>
 	                <div class="alert alert-danger">
 	                    <p class="error"><?= $_SESSION['ERROR_MESSAGE']; ?></p>

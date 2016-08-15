@@ -1,4 +1,3 @@
-<?php //require __DIR__ . '../../database/db_connect.php' ?>
 
 <div class="container" style="padding-top: 6%">
 
@@ -6,7 +5,7 @@
 
 		<div class="row">
 
-			<div class="container-fluid text-center" id="home-logo"><img class="center-block img-responsive" style="padding:1px; border:1px solid #021a40" src="img/pokemon_logo.jpg"></div>
+			<div class="container-fluid text-center" id="home-logo"><a href="/"><img class="center-block img-responsive" href="/" style="padding:1px; border:1px solid #021a40" src="img/pokemon_logo.jpg"></a></div>
 
 		</div>
 			<?php if (isset($_SESSION['ERROR_MESSAGE'])) : ?>

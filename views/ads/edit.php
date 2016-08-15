@@ -2,7 +2,7 @@
 
 	<section>
 		<div class="row">
-			<h2 class="create-title">Edit Item for Sale</h2>
+			<h2 class="create-title">Edit Item</h2>
 		</div>
 	</section>
 
@@ -29,16 +29,15 @@
 				<form action="" method="POST" enctype="multipart/form-data" data-validation data-required-message="This field is required">
 
 					<div class="form-group">
-					    <input type="text" class="form-control" id="name" name="name" placeholder="Name" value="<?=$item->name; ?>" data-required>
+					    <input type="text" class="form-control" id="name" name="name" placeholder="Name" value="<?= $item->name; ?>" data-required>
 					</div>
 
 					<div class="form-group">
-					    <input type="text" class="form-control" id="cost" cost="cost" placeholder="Cost" value="<?=$item->cost; ?>" data-required data-validate="currency" data-message="Price must be number/s with decimals.">
+					    <input type="text" class="form-control" id="email" email="email" placeholder="Email" value="<?= $item->email; ?>" data-required data-validate="currency" data-message="Price must be number/s with decimals.">
 					</div>	
 
 					<div class="form-group">
-					    <textarea class="form-control" id="description" description="description" placeholder="Description" rows="15" data-required><?=$item->description; ?>
-					    </textarea>
+					    <textarea class="form-control" id="description" description="description" placeholder="Description" rows="10" value="<?= $item->description; ?>" data-required></textarea>
 					</div>
 
 					<div class="form-group">

@@ -6,6 +6,11 @@ class Item extends Model
 {
 	protected static $table = 'items';
 
+	public function __set($name, $value)
+	{
+		parent::__set($name, $value);
+	}
+
 	public function user() {
 		return User::find($this->user_id);
 	}
@@ -30,10 +35,12 @@ class Item extends Model
 		return $instance;
 	}
 
-	public function featuredItems() {
+	
+
+	public static function featuredItems($num = 5) {
 		self::dbConnect();
 
-		$query = 'SELECT * FROM ' . self::$table . ' ORDER BY id LIMIT 4';
+		$query = 'SELECT * FROM ' . self::$table . ' ORDER BY id desc LIMIT ' . $num;
 		$stmt = self::$dbc->prepare($query);
 		$stmt->execute();
 		$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -48,4 +55,48 @@ class Item extends Model
 
 		return $instance;
 	}
+
+//  	public static function pagination()
+//     {
+//         self::dbConnect();
+//         $page = Input::get('page', 1);
+//         $limit = 5;
+//         $offset = ($page * $limit) - $limit;
+//         $sql= "SELECT * FROM items LIMIT :count OFFSET :shift";
+//         $stmt = self::$dbc->prepare($sql);
+//         $stmt->bindValue(':count', $limit, PDO::PARAM_INT);
+//         $stmt->bindValue(':shift', $offset, PDO::PARAM_INT);
+//         $stmt->execute();
+//         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+//         $instance = null;
+//         if ( $results )
+//         {
+//             $instance = new static;
+//             $instance->attributes = $results;
+//         }
+//         return $instance;
+//     }
+
+//  	public static function featured()
+//     {
+//         self::dbConnect();
+//         $page = Input::get('page', 1);
+//         $limit = 5;
+//         $offset = ($page * $limit) - $limit;
+//         $sql= "SELECT * FROM items WHERE id = 1 OR id = 2 OR id = 3 LIMIT :count OFFSET :shift";
+//         $stmt = self::$dbc->prepare($sql);
+//         $stmt->bindValue(':count', $limit, PDO::PARAM_INT);
+//         $stmt->bindValue(':shift', $offset, PDO::PARAM_INT);
+//         $stmt->execute();
+//         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+//         $instance = null;
+//         if ( $results )
+//         {
+//             $instance = new static;
+//             $instance->attributes = $results;
+//         }
+//         return $instance;
+//     }
+// }    
 }
+ ?>

@@ -16,11 +16,15 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="#">Buy</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="#">Account</a></li>
+        <li><a href="/ads">Buy</a></li>
         <li><a href="#">Sell</a></li>
         <li><a href="#">Trade</a></li>
         <li><a href="#">Free</a></li>
-        <li><a href="#">Help & Contact</a></li>
+          <li><a href="/ads/create">Create</a></li>
+          <li><a href="/logout">Logout</a></li>
+       
       </ul>
 
       <ul class="nav navbar-nav navbar-right">

@@ -1,4 +1,3 @@
-<?php require '../views/partials/navbar.php'?>
 
 <section>
     <div class="container">
@@ -36,7 +35,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-3 text-center">
-            <h1 id="featured" style="padding:1px; border:1px solid #021a40">Featured</h1>
+            <h1 id="featured">Featured</h1>
         </div>
     </div>
 </div>
@@ -52,157 +51,106 @@
                         <li class="col-sm-3">
                             <div class="fff">
                                 <div class="thumbnail">
-                                    <a href="#"><img src="http://placehold.it/360x240" alt=""></a>
+                                    <a href="ads/show?id=5"><img src="img/machamp.png" alt="" style="padding:1px; border:1px solid #021a40"></a>
                                 </div>
                                 <div class="caption">
-                                    <h4>Praesent commodo</h4>
+                                    <h4>Machump</h4>
                                     <p>Nullam Condimentum Nibh Etiam Sem</p>
-                                    <a class="btn btn-mini" href="#">» Read More</a>
+                                    <a class="btn btn-mini" href="ads/show?id=5">» Read More</a>
                                 </div>
                             </div>
                         </li>
                         <li class="col-sm-3">
                             <div class="fff">
                                 <div class="thumbnail">
-                                    <a href="#"><img src="http://placehold.it/360x240" alt=""></a>
+                                    <a href="#"><img src="img/charizard.png" alt="" style="padding:1px; border:1px solid #021a40" alt=""></a>
                                 </div>
                                 <div class="caption">
-                                    <h4>Praesent commodo</h4>
+                                    <h4>Charring Chardaddy</h4>
                                     <p>Nullam Condimentum Nibh Etiam Sem</p>
-                                    <a class="btn btn-mini" href="#">» Read More</a>
+                                    <a class="btn btn-mini" href="ads/show?id=6">» Read More</a>
                                 </div>
                             </div>
                         </li>
                         <li class="col-sm-3">
                             <div class="fff">
                                 <div class="thumbnail">
-                                    <a href="#"><img src="http://placehold.it/360x240" alt=""></a>
+                                    <a href="#"><img src="img/kadabra.png" alt="" style="padding:1px; border:1px solid #021a40"></a>
                                 </div>
                                 <div class="caption">
-                                    <h4>Praesent commodo</h4>
+                                    <h4>Ka Dab Dabra</h4>
                                     <p>Nullam Condimentum Nibh Etiam Sem</p>
-                                    <a class="btn btn-mini" href="#">» Read More</a>
+                                    <a class="btn btn-mini" href="ads/show?id=11">» Read More</a>
                                 </div>
                             </div>
                         </li>
                         <li class="col-sm-3">
                             <div class="fff">
                                 <div class="thumbnail">
-                                    <a href="#"><img src="http://placehold.it/360x240" alt=""></a>
+                                    <a href="#"><img src="img/grimer.png" alt="" style="padding:1px; border:1px solid #021a40"></a>
                                 </div>
                                 <div class="caption">
-                                    <h4>Praesent commodo</h4>
+                                    <h4>Moltres</h4>
                                     <p>Nullam Condimentum Nibh Etiam Sem</p>
-                                    <a class="btn btn-mini" href="#">» Read More</a>
+                                    <a class="btn btn-mini" href="ads/show?id=3">» Read More</a>
                                 </div>
                             </div>
                         </li>
                     </ul>
-                </div><!-- /Slide1 -->
+                </div>
+
                 <div class="item">
                     <ul class="thumbnails">
                         <li class="col-sm-3">
                             <div class="fff">
                                 <div class="thumbnail">
-                                    <a href="#"><img src="http://placehold.it/360x240" alt=""></a>
+                                    <a href="#"><img src="img/squirtle.png" alt="" style="padding:1px; border:1px solid #021a40"></a>
                                 </div>
                                 <div class="caption">
-                                    <h4>Praesent commodo</h4>
+                                    <h4>Flying Squirtle</h4>
                                     <p>Nullam Condimentum Nibh Etiam Sem</p>
-                                    <a class="btn btn-mini" href="#">» Read More</a>
+                                    <a class="btn btn-mini" href="/ads/show?id=7">» Read More</a>
                                 </div>
                             </div>
                         </li>
                         <li class="col-sm-3">
                             <div class="fff">
                                 <div class="thumbnail">
-                                    <a href="#"><img src="http://placehold.it/360x240" alt=""></a>
+                                    <a href="#"><img src="img/rhyhorn.png" alt="" style="padding:1px; border:1px solid #021a40"></a>
                                 </div>
                                 <div class="caption">
-                                    <h4>Praesent commodo</h4>
+                                    <h4>Why Horn</h4>
                                     <p>Nullam Condimentum Nibh Etiam Sem</p>
-                                    <a class="btn btn-mini" href="#">» Read More</a>
+                                    <a class="btn btn-mini" href="ads/show?id=8">» Read More</a>
                                 </div>
                             </div>
                         </li>
                         <li class="col-sm-3">
                             <div class="fff">
                                 <div class="thumbnail">
-                                    <a href="#"><img src="http://placehold.it/360x240" alt=""></a>
+                                    <a href="#"><img src="img/mewtwo.png" alt="" style="padding:1px; border:1px solid #021a40"></a>
                                 </div>
                                 <div class="caption">
-                                    <h4>Praesent commodo</h4>
+                                    <h4>Mew2.o</h4>
                                     <p>Nullam Condimentum Nibh Etiam Sem</p>
-                                    <a class="btn btn-mini" href="#">» Read More</a>
+                                    <a class="btn btn-mini" href="ads/show?id=9">» Read More</a>
                                 </div>
                             </div>
                         </li>
                         <li class="col-sm-3">
                             <div class="fff">
                                 <div class="thumbnail">
-                                    <a href="#"><img src="http://placehold.it/360x240" alt=""></a>
+                                    <a href="#"><img src="img/slobro.png" alt="" style="padding:1px; border:1px solid #021a40"></a>
                                 </div>
                                 <div class="caption">
-                                    <h4>Praesent commodo</h4>
+                                    <h4>Come at me Slobro</h4>
                                     <p>Nullam Condimentum Nibh Etiam Sem</p>
-                                    <a class="btn btn-mini" href="#">» Read More</a>
+                                    <a class="btn btn-mini" href="ads/show?id=10">» Read More</a>
                                 </div>
                             </div>
                         </li>
                     </ul>
-                </div><!-- /Slide2 -->
-                <div class="item">
-                    <ul class="thumbnails">
-                        <li class="col-sm-3">
-                            <div class="fff">
-                                <div class="thumbnail">
-                                    <a href="#"><img src="http://placehold.it/360x240" alt=""></a>
-                                </div>
-                                <div class="caption">
-                                    <h4>Praesent commodo</h4>
-                                    <p>Nullam Condimentum Nibh Etiam Sem</p>
-                                    <a class="btn btn-mini" href="#">» Read More</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-sm-3">
-                            <div class="fff">
-                                <div class="thumbnail">
-                                    <a href="#"><img src="http://placehold.it/360x240" alt=""></a>
-                                </div>
-                                <div class="caption">
-                                    <h4>Praesent commodo</h4>
-                                    <p>Nullam Condimentum Nibh Etiam Sem</p>
-                                    <a class="btn btn-mini" href="#">» Read More</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-sm-3">
-                            <div class="fff">
-                                <div class="thumbnail">
-                                    <a href="#"><img src="http://placehold.it/360x240" alt=""></a>
-                                </div>
-                                <div class="caption">
-                                    <h4>Praesent commodo</h4>
-                                    <p>Nullam Condimentum Nibh Etiam Sem</p>
-                                    <a class="btn btn-mini" href="#">» Read More</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-sm-3">
-                            <div class="fff">
-                                <div class="thumbnail">
-                                    <a href="#"><img src="http://placehold.it/360x240" alt=""></a>
-                                </div>
-                                <div class="caption">
-                                    <h4>Praesent commodo</h4>
-                                    <p>Nullam Condimentum Nibh Etiam Sem</p>
-                                    <a class="btn btn-mini" href="#">» Read More</a>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div><!-- /Slide3 -->
+                </div>
             </div>
 
 
@@ -212,47 +160,42 @@
                     <li><a data-slide="next" href="#myCarousel" class=""><i class="glyphicon glyphicon-chevron-right"></i></a></li>
                 </ul>
             </nav>
-            <!-- /.control-box -->
 
-        </div><!-- /#myCarousel -->
-</div><!-- /.col-xs-12 -->          
+        </div>
+</div>
 
-</div><!-- /.container -->
+</div>
 
 <hr>
-<!-- middle section -->
+
 
 <section>
     <div class="container">
             <div class="row">        
                 <div class="col-md-3 text-center"> 
-                    <h1 id="deals" style="padding:1px; border:1px solid #021a40">Daily Deals</h1>
+                    <h1 id="deals">Daily Deals</h1>
                 </div>
             </div>
             <br>
             <div class="row">
                 <div class="col-md-5" text-center>
-                        <img src="img/moltres.png" class="img-responsive center-block" width="406" height="257" style="padding:1px; border:1px solid #021a40">
+                        <img src="img/bulbarsar.png" class="img-responsive center-block" width="370" height="257" style="padding:1px; border:1px solid #021a40">
                                 <br>
                                 <div class="caption" style="padding:1px; border:1px solid #021a40; background-color: #ffffff; opacity: 0.9">
                                     <h4>Praesent commodo</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                    consequat.</p>
+                                    tempor incididunt ut labore et dolore magna aliqua.</p>
                                     <a class="btn btn-mini" href="#">» Read More</a>
                                 </div>                        
                 </div>
                 <div class="col-md-2"></div>
                 <div class="col-md-5">
-                        <img src="img/moltres.png" class="img-responsive center-block" width="406" height="257" style="padding:1px; border:1px solid #021a40">
+                        <img src="img/moltres.png" class="img-responsive center-block" width="500" height="257" style="padding:1px; border:1px solid #021a40">
                                 <br>
                                 <div class="caption" style="padding:1px; border:1px solid #021a40; background-color: #ffffff; opacity: 0.9">
                                     <h4>Praesent commodo</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                    consequat.</p>
+                                    tempor incididunt ut labore et dolore magna aliqua.</p>
                                     <a class="btn btn-mini" href="#">» Read More</a>
                                 </div>                                  
                 </div>
@@ -275,7 +218,7 @@
                             </td>                    
                             <td>
                                 <ul>
-                                    <li><h5><a href="#">Buy</a></h5></li>
+                                    <li><h5><a href="/ads">Buy</a></h5></li>
                                 </ul>
                             </td>
                             <td>

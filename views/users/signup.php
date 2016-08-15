@@ -1,10 +1,11 @@
+
 <div class="container" style="padding: 6%">
 
 	<section id="login">
 
 		<div class="row">
 
-			<div class="container-fluid text-center" id="home-logo"><img class="center-block img-responsive" style="padding:1px; border:1px solid #021a40" src="img/pokemon_logo.jpg"></div>
+			<div class="container-fluid text-center" id="home-logo"><a href="/"><img class="center-block img-responsive" style="padding:1px; border:1px solid #021a40" src="img/pokemon_logo.jpg"></a></div>
 
 		</div>
 

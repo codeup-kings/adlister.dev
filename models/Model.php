@@ -134,7 +134,7 @@ class Model {
     }
 
     // updates existing entry in db
-    protected function update()
+    protected function update($id)
     {
 
         //Ensure that update is properly handled with the id key

@@ -115,12 +115,22 @@ li { list-style-type:none;}
 ::selection { background: #ff5e99; color: #FFFFFF; text-shadow: 0; }
 ::-moz-selection { background: #ff5e99; color: #FFFFFF; }
 
-#deals, #featured {
+#deals, #featured, #for-sale {
     color: #020617;
     background-color: #ffffff;
     opacity: 0.9;
     font-weight: 300;
     font-family: sans-serif;
+    padding:1px; 
+    border:1px solid #021a40
+}
+
+#poke-description {
+    font-size: large; 
+    padding:1px; 
+    border:1px solid #021a40; 
+    background-color: #ffffff; 
+    opacity: 0.9;
 }
 
 body {
@@ -146,10 +156,6 @@ body {
     text-align: left;
 }
 
-
-/*#searchHome, #dropdownMenu1 {
-    margin-top: 78px;
-    margin-bottom: 78px;
+.show-page {
+    font-size: x-large;
 }
-*/
-
