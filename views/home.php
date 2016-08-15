@@ -51,11 +51,10 @@
                         <li class="col-sm-3">
                             <div class="fff">
                                 <div class="thumbnail">
-                                    <a href="ads/show?id=5"><img src="img/machamp.png" alt="" style="padding:1px; border:1px solid #021a40"></a>
+                                    <a href="ads/show?id=5"><img src="img/machamp.png" class="img-size" alt="" style="padding:1px; border:1px solid #021a40; width:360px;height:240px;"></a>
                                 </div>
                                 <div class="caption">
                                     <h4>Machump</h4>
-                                    <p>Nullam Condimentum Nibh Etiam Sem</p>
                                     <a class="btn btn-mini" href="ads/show?id=5">» Read More</a>
                                 </div>
                             </div>
@@ -63,11 +62,10 @@
                         <li class="col-sm-3">
                             <div class="fff">
                                 <div class="thumbnail">
-                                    <a href="#"><img src="img/charizard.png" alt="" style="padding:1px; border:1px solid #021a40" alt=""></a>
+                                    <a href="#"><img src="img/charizard.png" class="img-size" alt="" style="padding:1px; border:1px solid #021a40; width:360px;height:240px;"></a>
                                 </div>
                                 <div class="caption">
                                     <h4>Charring Chardaddy</h4>
-                                    <p>Nullam Condimentum Nibh Etiam Sem</p>
                                     <a class="btn btn-mini" href="ads/show?id=6">» Read More</a>
                                 </div>
                             </div>
@@ -75,11 +73,10 @@
                         <li class="col-sm-3">
                             <div class="fff">
                                 <div class="thumbnail">
-                                    <a href="#"><img src="img/kadabra.png" alt="" style="padding:1px; border:1px solid #021a40"></a>
+                                    <a href="#"><img src="img/kadabra.png" class="img-size" alt="" style="padding:1px; border:1px solid #021a40; width:360px;height:240px;"></a>
                                 </div>
                                 <div class="caption">
                                     <h4>Ka Dab Dabra</h4>
-                                    <p>Nullam Condimentum Nibh Etiam Sem</p>
                                     <a class="btn btn-mini" href="ads/show?id=11">» Read More</a>
                                 </div>
                             </div>
@@ -87,11 +84,10 @@
                         <li class="col-sm-3">
                             <div class="fff">
                                 <div class="thumbnail">
-                                    <a href="#"><img src="img/grimer.png" alt="" style="padding:1px; border:1px solid #021a40"></a>
+                                    <a href="#"><img src="img/grimer.png" class="img-size" alt="" style="padding:1px; border:1px solid #021a40; width:360px;height:240px;"></a>
                                 </div>
                                 <div class="caption">
-                                    <h4>Moltres</h4>
-                                    <p>Nullam Condimentum Nibh Etiam Sem</p>
+                                    <h4>Grimer</h4>
                                     <a class="btn btn-mini" href="ads/show?id=3">» Read More</a>
                                 </div>
                             </div>
@@ -103,12 +99,11 @@
                     <ul class="thumbnails">
                         <li class="col-sm-3">
                             <div class="fff">
-                                <div class="thumbnail">
-                                    <a href="#"><img src="img/squirtle.png" alt="" style="padding:1px; border:1px solid #021a40"></a>
+                                <div class="thumbnail ">
+                                    <a href="#"><img src="img/squirtle.png" class="img-size" alt="" style="padding:1px; border:1px solid #021a40; width:360px;height:240px;"></a>
                                 </div>
                                 <div class="caption">
                                     <h4>Flying Squirtle</h4>
-                                    <p>Nullam Condimentum Nibh Etiam Sem</p>
                                     <a class="btn btn-mini" href="/ads/show?id=7">» Read More</a>
                                 </div>
                             </div>
@@ -116,11 +111,10 @@
                         <li class="col-sm-3">
                             <div class="fff">
                                 <div class="thumbnail">
-                                    <a href="#"><img src="img/rhyhorn.png" alt="" style="padding:1px; border:1px solid #021a40"></a>
+                                    <a href="#"><img src="img/rhyhorn.png" class="img-size" alt="" style="padding:1px; border:1px solid #021a40; width:360px;height:240px;"></a>
                                 </div>
                                 <div class="caption">
                                     <h4>Why Horn</h4>
-                                    <p>Nullam Condimentum Nibh Etiam Sem</p>
                                     <a class="btn btn-mini" href="ads/show?id=8">» Read More</a>
                                 </div>
                             </div>
@@ -128,11 +122,10 @@
                         <li class="col-sm-3">
                             <div class="fff">
                                 <div class="thumbnail">
-                                    <a href="#"><img src="img/mewtwo.png" alt="" style="padding:1px; border:1px solid #021a40"></a>
+                                    <a href="#"><img src="img/mewtwo.png" class="img-size" alt="" style="padding:1px; border:1px solid #021a40; width:360px;height:240px;"></a>
                                 </div>
                                 <div class="caption">
                                     <h4>Mew2.o</h4>
-                                    <p>Nullam Condimentum Nibh Etiam Sem</p>
                                     <a class="btn btn-mini" href="ads/show?id=9">» Read More</a>
                                 </div>
                             </div>
@@ -140,11 +133,10 @@
                         <li class="col-sm-3">
                             <div class="fff">
                                 <div class="thumbnail">
-                                    <a href="#"><img src="img/slobro.png" alt="" style="padding:1px; border:1px solid #021a40"></a>
+                                    <a href="#"><img src="img/slobro.png" class="img-size" alt="" style="padding:1px; border:1px solid #021a40; width:360px;height:240px;"></a>
                                 </div>
                                 <div class="caption">
                                     <h4>Come at me Slobro</h4>
-                                    <p>Nullam Condimentum Nibh Etiam Sem</p>
                                     <a class="btn btn-mini" href="ads/show?id=10">» Read More</a>
                                 </div>
                             </div>
