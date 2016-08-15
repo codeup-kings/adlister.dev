@@ -124,28 +124,41 @@ function addNewUser() {
 	}
 }
 
-// checks if information was submitted in POST request
-// if so, takes submitted info and updates the specified
-// item if owned by the logged in user
-function updateItemWithInputIfExists()
+function deleteItem(){
+	$item = Item::find(Input::get('id'));
+
+	if ($item == null)
+	{
+		$_SESSION['ERROR_MESSAGE'] = 'Post not found';
+		header('Location: /ads');
+		die();
+	}
+
+	if ($item->user_id != Auth::id())
+	{
+		$_SESSION['ERROR_MESSAGE'] = 'You do not have permission to do that';
+		header('Location: /items/show?id=' . $item->id);
+		die();
+	}
+	$item->delete();
+	$_SESSION['SUCCESS_MESSAGE'] = 'Post successfully deleted';
+	header('Location: /user/account?id=' . Auth::user()->id);
+	die();
+}
+
+function convertToMoney($number, $cents = 2)
 {
-    if (hasInput('POST'))
-    {
-        $item = Item::find( Input::get('id') );
-        if ($item->user_id == Auth::user()->id)
-        {
-            $item->name = Input::get('name');
-            $item->cost = Input::get('cost');
-            $item->description = Input::get('description');
-            $image_url = saveUploadedImage('image');
-            if ($image_url != null)
-            {
-                $item->image_url = $image_url;
-            }
-            $item->save();
-            header('Location: /items');
-            die();
-        }
-    }
+	if (is_numeric($number)) { // a number
+		if (!$number) { // zero
+			$money = ($cents == 2 ? '0.00' : '0'); // output zero
+		} else { // value
+			if (floor($number) == $number) { // whole number
+				$money = number_format($number, ($cents == 2 ? 2 : 0)); // format
+			} else { // cents
+				$money = number_format(round($number, 2), ($cents == 0 ? 0 : 2)); // format
+			} // integer or decimal
+		} // value
+		return '$'.$money;
+	} // numeric
 }
 

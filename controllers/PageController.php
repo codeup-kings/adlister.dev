@@ -32,6 +32,11 @@ function pageController()
 			$data['items'] = $data['user']->showItems();
             $main_view= '../views/users/account.php';
             break;
+		case "/user/edit":
+			checkIfLoggedInUserPage();
+			$data['user'] = User::find(Input::get('id'));
+			$main_view= '../views/users/edit.php';
+			break;
 		case "/logout":
         	Auth::logout();
 			header('Location: /');
@@ -46,11 +51,16 @@ function pageController()
 			$main_view= '../views/ads/create.php';
 			break;
 		case "/ads/edit":
+
+			$data['item'] = Item::find(Input::get('id'));
 			$main_view= '../views/ads/edit.php';
 			break;
 		case "/ads/show":
 			$data['item'] = Item::find(Input::get('id'));
 			$main_view= '../views/ads/show.php';
+			break;
+		case "/ads/delete":
+			deleteItem();
 			break;
         default:    // displays 404 if route not specified above
             $main_view = '../views/404.php';
