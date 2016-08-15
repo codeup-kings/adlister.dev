@@ -159,3 +159,10 @@ body {
 .show-page {
     font-size: x-large;
 }
+
+.img-size {
+    padding:1px; 
+    border:1px solid #021a40; 
+    width:360px;
+    height:240px;
+}
