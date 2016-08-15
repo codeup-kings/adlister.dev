@@ -33,7 +33,7 @@
             	<p class="show-page">Cost: <?= convertToMoney($item->cost); ?></p>
 
             	<h3>Seller Info</h3>
-            	<p class="show-page"><a href="/users/account?id=<?= $item->user_id; ?>"><?= $item->user()->name; ?></a></p>
+            	<p class="show-page"><a href="/user/account?id=<?= $item->user_id; ?>"><?= $item->user()->name; ?></a></p>
             </div>
 
 		</div>

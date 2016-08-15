@@ -30,6 +30,10 @@ function pageController()
         case "/user/account":
         	checkIfLoggedInUserPage();
 			$data['user'] = User::find(Input::get('id'));
+            if ($data['user']->id != Auth::id()) {
+                header('Location: /user/account?id=' . Auth::id());
+                die();
+            }
 			$data['items'] = $data['user']->showItems();
             $main_view= '../views/users/account.php';
             break;
