@@ -71,6 +71,7 @@
                     <?php endforeach; ?>
                 </div>
             </div>
+
             <nav>
                 <ul class="control-box pager">
                     <li><a data-slide="prev" href="#myCarousel" class=""><i class="glyphicon glyphicon-chevron-left"></i></a></li>

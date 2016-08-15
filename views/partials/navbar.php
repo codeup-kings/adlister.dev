@@ -17,7 +17,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="/">Home</a></li>
-        <li><a href="#">Account</a></li>
+        <li><a href="/user/account?id=">Account</a></li>
         <li><a href="/ads">Buy</a></li>
         <li><a href="#">Sell</a></li>
         <li><a href="#">Trade</a></li>
